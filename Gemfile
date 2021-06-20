@@ -42,6 +42,7 @@ group :development do
   gem 'spring'
   gem 'debase'
   gem 'ruby-debug-ide'
+  gem 'rubocop', require: false
 end
 
 group :test do
