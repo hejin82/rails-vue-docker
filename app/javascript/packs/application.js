@@ -8,7 +8,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "../../assets/stylesheets/application.css"
-
+require("../controllers");
 
 Rails.start()
 Turbolinks.start()
