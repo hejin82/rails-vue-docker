@@ -64,7 +64,7 @@ development:
     public: 0.0.0.0:4045
     hmr: false
     # Inline should be set to true if using HMR
-    inline: true
+    inline: false
     overlay: true
     compress: true
     disable_host_check: true
