@@ -44,6 +44,7 @@ group :development do
   gem 'ruby-debug-ide'
   gem 'rubocop', require: false
   gem 'rubocop-performance'
+  gem 'foreman'
 end
 
 group :test do

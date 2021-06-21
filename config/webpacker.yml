@@ -55,9 +55,13 @@ development:
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
     https: false
-    host: webpack_dev_server
+#    host: webpack_dev_server
+#    port: 4045
+#    sockPort: 4045
+#    public: 192.168.3.19:4045
+    host: 0.0.0.0
     port: 4045
-    public: 192.168.3.19:4045
+    public: 0.0.0.0:4045
     hmr: false
     # Inline should be set to true if using HMR
     inline: true
@@ -71,6 +75,8 @@ development:
       'Access-Control-Allow-Origin': '*'
     watch_options:
       ignored: '**/node_modules/**'
+      aggregate_timeout: 300
+      poll: 500
 
 
 test:
