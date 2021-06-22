@@ -52,6 +52,9 @@ development:
   <<: *default
   compile: true
 
+  # Extract and emit a css file
+  extract_css: true
+
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
     https: false
