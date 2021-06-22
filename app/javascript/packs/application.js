@@ -9,7 +9,24 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "../../assets/stylesheets/application.scss"
 require("../controllers");
+import Switch from "../lib/Switch";
+import Vue from "vue";
+import App from "../app";
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+document.addEventListener('DOMContentLoaded', () => {
+  let switchElement = document.querySelectorAll('.has-switch');
+  switchElement.forEach(function (element) {
+
+    if (element) {
+      let switchObj = new Switch(element, {});
+      element.addEventListener('change.app.switch', function (event) {
+        console.log('tiger event')
+      })
+      switchObj.show()
+    }
+  });
+})
