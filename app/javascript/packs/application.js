@@ -12,6 +12,8 @@ require("../controllers");
 import Switch from "../lib/Switch";
 import Vue from "vue";
 import App from "../app";
+import Tablesort from "tablesort"
+console.log(Tablesort);
 
 Rails.start()
 Turbolinks.start()
