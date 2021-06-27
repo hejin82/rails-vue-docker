@@ -5,17 +5,17 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
-import Vue from 'vue'
-import App from '../app.vue'
-
-document.addEventListener('DOMContentLoaded', () => {
-  const app = new Vue({
-    render: h => h(App)
-  }).$mount()
-  document.body.appendChild(app.$el)
-
-  console.log(app)
-})
+// import Vue from 'vue'
+// import App from '../app.vue'
+//
+// document.addEventListener('DOMContentLoaded', () => {
+//   const app = new Vue({
+//     render: h => h(App)
+//   }).$mount()
+//   document.body.appendChild(app.$el)
+//
+//   console.log(app)
+// })
 
 
 // The above code uses Vue without the compiler, which means you cannot
@@ -70,3 +70,28 @@ document.addEventListener('DOMContentLoaded', () => {
 //     components: { App }
 //   })
 // })
+
+import { createApp } from 'vue';
+import App from '../app.vue';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const app = createApp(App);
+  app.mount('#hello_vue');
+
+  let header = document.getElementById("myHeader");
+  if (header) {
+    let sticky = header.offsetTop;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > sticky) {
+        document.getElementById('navbar_top').classList.add('fixed-top');
+        // add padding top to show content behind navbar
+        // navbar_height = document.querySelector('.navbar').offsetHeight;
+        // document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.getElementById('navbar_top').classList.remove('fixed-top');
+        // remove padding top from body
+        // document.body.style.paddingTop = '0';
+      }
+    });
+  }
+});
