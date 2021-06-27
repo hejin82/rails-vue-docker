@@ -1,15 +1,16 @@
-import { Controller } from "stimulus";
+import { Controller } from 'stimulus';
 
 export default class extends Controller {
-  initialize() {
-    console.log('hello from stimulus')
-  }
-  static get targets() {
-    return ['name', 'counter'];
-  }
+    initialize() {
+        console.log('hello from stimulus');
+    }
 
-  countCharacters(event) {
-    let characters = this.nameTarget.value.length;
-    this.counterTarget.innerText = characters;
-  }
+    static get targets() {
+        return ['name', 'counter'];
+    }
+
+    countCharacters(event) {
+        const characters = this.nameTarget.value.length;
+        this.counterTarget.innerText = characters;
+    }
 }

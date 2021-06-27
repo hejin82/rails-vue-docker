@@ -1,8 +1,7 @@
 (function () {
+    this.AppPj = { app: 'test' };
 
-  this.AppPj = { 'app': 'test'};
+    const { AppPj } = this;
 
-  let AppPj = this.AppPj;
-
-  module.exports = AppPj;
+    module.exports = AppPj;
 }).call(this);

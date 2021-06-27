@@ -17,7 +17,6 @@
 //   console.log(app)
 // })
 
-
 // The above code uses Vue without the compiler, which means you cannot
 // use Vue to target elements in your existing html templates. You would
 // need to always use single file components.
@@ -30,7 +29,6 @@
 //   {{message}}
 //   <app></app>
 // </div>
-
 
 // import Vue from 'vue/dist/vue.esm'
 // import App from '../app.vue'
@@ -75,23 +73,23 @@ import { createApp } from 'vue';
 import App from '../app.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const app = createApp(App);
-  app.mount('#hello_vue');
+    const app = createApp(App);
+    app.mount('#hello_vue');
 
-  let header = document.getElementById("myHeader");
-  if (header) {
-    let sticky = header.offsetTop;
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > sticky) {
-        document.getElementById('navbar_top').classList.add('fixed-top');
-        // add padding top to show content behind navbar
-        // navbar_height = document.querySelector('.navbar').offsetHeight;
-        // document.body.style.paddingTop = navbar_height + 'px';
-      } else {
-        document.getElementById('navbar_top').classList.remove('fixed-top');
-        // remove padding top from body
-        // document.body.style.paddingTop = '0';
-      }
-    });
-  }
+    const header = document.getElementById('myHeader');
+    if (header) {
+        const sticky = header.offsetTop;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > sticky) {
+                document.getElementById('navbar_top').classList.add('fixed-top');
+                // add padding top to show content behind navbar
+                // navbar_height = document.querySelector('.navbar').offsetHeight;
+                // document.body.style.paddingTop = navbar_height + 'px';
+            } else {
+                document.getElementById('navbar_top').classList.remove('fixed-top');
+                // remove padding top from body
+                // document.body.style.paddingTop = '0';
+            }
+        });
+    }
 });
