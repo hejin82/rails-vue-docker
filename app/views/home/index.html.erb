@@ -145,7 +145,8 @@
 
 <div class="container" style="min-height: 100%;
     padding-bottom:60px;">
-  ss
+  <%= link_to 'delete', home_index_path, data: { confirm: 'are you sure?' } %>
+  <%= link_to 'confirm-test', home_index_path, data: { confirm_test: 'are you sure?' } %>
 </div>
 <div class="container">
   <div class="col-12">

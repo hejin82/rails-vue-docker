@@ -13,7 +13,22 @@ import Switch from "../lib/Switch";
 import Vue from "vue";
 import App from "../app";
 import Tablesort from "tablesort"
-console.log(Tablesort);
+
+import AppPj from "./app-pj"
+console.log('AppPj:', AppPj)
+
+Rails.handleConfirm = link => {
+  console.log('link:', link)
+  alert(link)
+  return false
+}
+const handleConfirm = (link) => {
+  alert(link.target)
+}
+
+// Add event listener before the other Rails event listeners like the one
+// for `method: :delete`
+Rails.delegate(document, 'a[data-confirm-test]', 'click', handleConfirm)
 
 Rails.start()
 Turbolinks.start()
