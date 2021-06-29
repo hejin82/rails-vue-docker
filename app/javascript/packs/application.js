@@ -43,4 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
             switchObj.show();
         }
     });
+
+    const switchCheckbox = document.getElementById('switchCheckbox');
+    switchCheckbox.addEventListener('click', function (event) {
+        console.log('click:', event);
+    });
+    switchCheckbox.addEventListener('change', function (event) {
+        console.log('change:', event);
+    })
 });
