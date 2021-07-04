@@ -11,6 +11,9 @@ import '../../assets/stylesheets/application.scss';
 import Switch from '../lib/Switch';
 
 import AppPj from './app-pj';
+import flatpickr from "flatpickr";
+import { Japanese } from "flatpickr/dist/l10n/ja";
+flatpickr.localize(Japanese);
 
 require('../controllers');
 
@@ -33,22 +36,29 @@ Turbolinks.start();
 ActiveStorage.start();
 
 document.addEventListener('DOMContentLoaded', () => {
-    const switchElement = document.querySelectorAll('.has-switch');
-    switchElement.forEach((element) => {
-        if (element) {
-            const switchObj = new Switch(element, {});
-            element.addEventListener('change.app.switch', (event) => {
-                console.log('tiger event', event);
-            });
-            switchObj.show();
-        }
-    });
-
-    const switchCheckbox = document.getElementById('switchCheckbox');
-    switchCheckbox.addEventListener('click', function (event) {
-        console.log('click:', event);
-    });
-    switchCheckbox.addEventListener('change', function (event) {
-        console.log('change:', event);
+    // const switchElement = document.querySelectorAll('.has-switch');
+    // switchElement.forEach((element) => {
+    //     if (element) {
+    //         const switchObj = new Switch(element, {});
+    //         element.addEventListener('change.app.switch', (event) => {
+    //             console.log('tiger event', event);
+    //         });
+    //         switchObj.show();
+    //     }
+    // });
+    //
+    // const switchCheckbox = document.getElementById('switchCheckbox');
+    //  if (switchCheckbox) {
+    //      switchCheckbox.addEventListener('click', function (event) {
+    //          console.log('click:', event);
+    //      });
+    //      switchCheckbox.addEventListener('change', function (event) {
+    //          console.log('change:', event);
+    //      })
+    //  }
+    const a = flatpickr(".flatpickr", {
+        allowInput: true,
+        clickOpens: false,
     })
+    console.log("a:", a)
 });

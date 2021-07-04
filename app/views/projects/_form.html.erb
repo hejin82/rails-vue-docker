@@ -1,0 +1,76 @@
+<%= form_with(model: project) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+        <% project.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <div class="mb-3 row">
+        <%= form.label :name, class: "col-2 form-label text-right"%>
+        <div class="col-3">
+          <%= form.text_field :name, class: "form-control" %>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <%= form.label :name, class: "col-2 form-label text-right"%>
+        <div class="col-5">
+          <div class="input-group">
+            <%= form.text_field :name, class: "form-control" %>
+            <span class="input-group-text">
+              <a href="#">com</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <%= form.label :description, class: "col-2 form-label text-right" %>
+        <div class="col-3">
+          <%= form.text_field :description, class: "form-control" %>
+        </div>
+        <div class="col-7">
+          <a href="#" id="selectdate" class="btn bt-sm btn-primary">
+            date
+          </a>
+          <input type="text" class="flatpickr"/>
+          本日〜30日後まで指定できます。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <div class="col-3 mb-3">
+        <%= form.label :homepage, class: "form-label"%>
+        <%= form.text_field :homepage, class: "form-control" %>
+      </div>
+      <div class="col-3 mb-3 form-check">
+        <%= form.label :is_public, class: "form-check-label" %>
+        <%= form.check_box :is_public, class: "form-check-input" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.datetime_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.datetime_select :end_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
