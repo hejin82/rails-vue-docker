@@ -29,3 +29,115 @@
 <br>
 
 <%= link_to 'New Article', new_article_path %>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header header modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="header">
+  <span>test</span>
+</div>
+<br/>
+<br/>
+<table id="table" class="table table-bordered table-striped table-sm">
+  <thead>
+  <tr class="header">
+    <th scope="col">#</th>
+    <th scope="col">First<i class="fas fa-sort"></i></th>
+    <th scope="col">Last</th>
+    <th scope="col">Handle</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>Mark</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>Jacob</td>
+    <td>Thornton</td>
+    <td>@fat</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td colspan="2">Larry the Bird</td>
+    <td>@twitter</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="container-sm bg-primary">
+
+  <div class="row"><div class="col-12">100% wide until small breakpoint</div> </div>
+</div>
+<div class="container-md bg-info">
+
+  <div class="row"><div class="col-12">100% wide until medium breakpoint</div> </div>
+</div>
+<div class="container-lg bg-danger">
+
+  <div class="row"><div class="col-12">100% wide until large breakpoint</div> </div>
+</div>
+<div class="container-xl bg-dark">
+
+  <div class="row"><div class="col-12">100% wide until extra large breakpoint</div> </div>
+</div>
+<div class="container-xxl bg-danger">
+
+  <div class="row"><div class="col-12">100% wide until extra extra large breakpoint</div> </div>
+</div>
+
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Enable backdrop (default)</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+<div class="offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Try scrolling the rest of the page to see this option in action.</p>
+  </div>
+</div>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>.....</p>
+  </div>
+</div>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdroped with scrolling</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Try scrolling the rest of the page to see this option in action.</p>
+  </div>
+</div>

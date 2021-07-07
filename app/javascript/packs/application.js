@@ -16,6 +16,8 @@ import { Japanese } from "flatpickr/dist/l10n/ja";
 flatpickr.localize(Japanese);
 
 require('../controllers');
+import "bootstrap";
+import tablesort from 'tablesort';
 
 console.log('AppPj:', AppPj);
 
@@ -61,4 +63,5 @@ document.addEventListener('DOMContentLoaded', () => {
         clickOpens: false,
     })
     console.log("a:", a)
+    tablesort(document.getElementById('table'))
 });

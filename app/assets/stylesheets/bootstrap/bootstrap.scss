@@ -44,3 +44,11 @@
 
 // Utilities
 @import "../../../../node_modules/bootstrap/scss/utilities/api";
+
+.header {
+  //background-color: #fafafc;
+  background-color: $gray-100;
+}
+.modal-header {
+  cursor: move;
+}

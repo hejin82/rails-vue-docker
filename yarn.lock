@@ -937,6 +937,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fortawesome/fontawesome-free@^5.15.3":
+  version "5.15.3"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.3.tgz#c36ffa64a2a239bf948541a97b6ae8d729e09a9a"
+  integrity sha512-rFnSUN/QOtnOAgqFRooTA3H57JLDm0QEG/jPdk+tLQNL/eWd+Aok8g3qCI+Q1xuDPWpGW/i9JySpJVsq8Q0s9w==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -965,6 +970,11 @@
   dependencies:
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
+
+"@popperjs/core@^2.9.2":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.2.tgz#adea7b6953cbb34651766b0548468e743c6a2353"
+  integrity sha512-VZMYa7+fXHdwIq1TDhSXoVmSPEGM/aa+6Aiq3nVVJ9bXr24zScr+NlKFKC3iPljA7ho/GAZr+d2jOf5GIRC30Q==
 
 "@rails/actioncable@^6.0.0":
   version "6.0.4"
@@ -7390,7 +7400,7 @@ table@^6.0.9:
 
 tablesort@^5.2.1:
   version "5.2.1"
-  resolved "https://registry.npmjs.org/tablesort/-/tablesort-5.2.1.tgz"
+  resolved "https://registry.yarnpkg.com/tablesort/-/tablesort-5.2.1.tgz#722f6f8b13062709ac22aa16bc03c126c6ccf558"
   integrity sha512-AmNSrtzyba5Bd+Fm8oJJj/xS2bj5acoHEsDHxER2/4Tzo+5noPORpEsSLT9dI15X2MIuXlNnj+BBQcpMsoeTXQ==
 
 tapable@^1.0.0, tapable@^1.1.3:
