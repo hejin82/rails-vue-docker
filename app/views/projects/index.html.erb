@@ -1,36 +1,58 @@
 <p id="notice"><%= notice %></p>
+<main data-controller="projects">
+  <form
+    data-action="ajax:success->projects#result"
+    data-action="ajax:error->projects#error"
+    data-projects-target="form"
+    data-remote="true"
+    method="post"
+    action=""
+    >
+    <input
+      data-action="keyup->projects#search"
+      data-target="projects.query"
+      type="text"
+      name="query"
+      value="" />
+  </form>
 
-<h1>Projects</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Homepage</th>
-      <th>Is public</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
+  <h1>Projects</h1>
+  <div data-target="projects.display">
+    <table>
+      <thead>
       <tr>
-        <td><%= project.name %></td>
-        <td><%= project.description %></td>
-        <td><%= project.homepage %></td>
-        <td><%= project.is_public %></td>
-        <td><%= project.start_date %></td>
-        <td><%= project.end_date %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Homepage</th>
+        <th>Is public</th>
+        <th>Start date</th>
+        <th>End date</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      </thead>
+
+      <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td><%= project.name %></td>
+          <td><%= project.description %></td>
+          <td><%= project.homepage %></td>
+          <td><%= project.is_public %></td>
+          <td><%= project.start_date %></td>
+          <td><%= project.end_date %></td>
+          <td><%= link_to 'Show', project %></td>
+          <td><%= link_to 'Edit', edit_project_path(project) %></td>
+          <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+
+
+
 
 <br>
 

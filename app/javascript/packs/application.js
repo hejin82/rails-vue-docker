@@ -64,5 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
         clickOpens: false,
     })
     console.log("a:", a)
-    tablesort(document.getElementById('table'))
+    if (document.getElementById('table')) {
+        tablesort(document.getElementById('table'))
+    }
+
 });
