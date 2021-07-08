@@ -17,6 +17,7 @@ flatpickr.localize(Japanese);
 
 require('../controllers');
 import "bootstrap";
+import "@fortawesome/fontawesome-free/js/all"
 import tablesort from 'tablesort';
 
 console.log('AppPj:', AppPj);
