@@ -8,6 +8,9 @@ export default class extends Controller{
     console.log('connect projects controller - js')
   }
 
+  itemClick(event) {
+    alert(event)
+  }
   search(event) {
     const query = event.target.value.toLowerCase()
     console.log('query:', query)

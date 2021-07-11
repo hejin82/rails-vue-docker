@@ -1,5 +1,205 @@
 <p id="notice"><%= notice %></p>
+
 <main data-controller="projects">
+
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center">
+      <div class="inline w-100 field">
+        <label>Select Topics</label>
+
+        <select name="skills" multiple="" class="label ui selection fluid dropdown">
+          <option value="">All</option>
+          <option value="1">Topic 1</option>
+          <option value="2">Topic 2</option>
+          <option value="3">Topic 3</option>
+          <option value="4">Topic 4</option>
+          <option value="5">Topic 5</option>
+          <option value="6">Topic 6</option>
+          <option value="7">Topic 7</option>
+          <option value="8">Topic 8</option>
+          <option value="9">Topic 9</option>
+          <option value="10">Topic 10</option>
+          <option value="11">Topic 11</option>
+
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <%= form_with url: projects_path(page: 1), method: :get do |form| %>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation" data-action="click->projects#itemClick">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home">
+                  <div class="row">
+                    <div class="col-auto">
+                      <div class="row">
+                        <div class="col-auto">
+                          <select name="queryType1" class="form-select" aria-label="Default select example">
+                            <option value="0" <%= "selected" if params[:queryType1] == "0" %>>検索対象を選択してください。</option>
+                            <option value="1" <%= "selected" if params[:queryType1] == "1" %>>One</option>
+                            <option value="2" <%= "selected" if params[:queryType1] == "2" %>>Two</option>
+                            <option value="3" <%= "selected" if params[:queryType1] == "3" %>>Three</option>
+                          </select>
+                        </div>
+                        <div class="col-auto">
+                          <input class="form-control is-invalid"
+                                 name="queryText1"
+                                 type="text"
+                                 placeholder="Default input"
+                                 value="<%= params[:queryText1] %>">
+                        </div>
+                      </div>
+                      <div class="row mt-1">
+                        <div class="col-auto">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>検索対象を選択してください。</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="col-auto">
+                          <input class="form-control has-validation is-invalid" type="text" placeholder="Default input" aria-label="default input example">
+                        </div>
+                      </div>
+                      <div class="row mt-1">
+                        <div class="col-auto">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>検索対象を選択してください。</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="col-auto">
+                          <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                        </div>
+                      </div>
+                      <div class="row mt-1 ps-2">
+                        <div class="col-auto">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">全て該当する</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">いずれかに該当する</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <label>Choose a type:</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="type1" value="all" id="flexCheckIndeterminate1">
+                        <label class="form-check-label" for="flexCheckIndeterminate1">
+                          全て
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="type1" value="1" id="flexCheckIndeterminate2">
+                        <label class="form-check-label" for="flexCheckIndeterminate2">
+                          Indeterminate checkbox
+                        </label>
+                      </div>
+                      <select name="multipleType" class="form-select" multiple aria-label="multiple select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-auto">
+                      <label>Choose a type:</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" value="all" id="status">
+                        <label class="form-check-label" for="status">
+                          全て
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" value="1" id="status1">
+                        <label class="form-check-label" for="status1">
+                          Indeterminate checkbox
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" value="1" id="status2">
+                        <label class="form-check-label" for="status2">
+                          Indeterminate checkbox
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" value="1" id="status3">
+                        <label class="form-check-label" for="status3">
+                          Indeterminate checkbox
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" value="1" id="status4">
+                        <label class="form-check-label" for="status4">
+                          Indeterminate checkbox
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" value="1" id="status5">
+                        <label class="form-check-label" for="status5">
+                          Indeterminate checkbox
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" value="1" id="status6">
+                        <label class="form-check-label" for="status6">
+                          Indeterminate checkbox
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" value="1" id="status7">
+                        <label class="form-check-label" for="status7">
+                          Indeterminate checkbox
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" value="1" id="status8">
+                        <label class="form-check-label" for="status8">
+                          Indeterminate checkbox
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="status" value="1" id="status9">
+                        <label class="form-check-label" for="status9">
+                          Indeterminate checkbox
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="profile">
+                  profile
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= form.submit 'submit',data: { disable_with: 'Are you sure?' } %>
+  <% end %>
+
   <form
     data-action="ajax:success->projects#result"
     data-action="ajax:error->projects#error"
@@ -17,10 +217,22 @@
   </form>
 
   <h1>Projects</h1>
-  <div data-target="projects.display">
-    <table>
+  <div class="pagination">
+    <div class="page_info">
+      <%= page_entries_info @posts %>
+    </div>
+    <%= will_paginate @posts, :container => false %>
+  </div>
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+    <option selected>Open this select menu</option>
+    <option value="1">10</option>
+    <option value="2">50</option>
+    <option value="3">100</option>
+  </select>
+  <div class="container" data-target="projects.display">
+    <table class="table table-bordered">
       <thead>
-      <tr>
+      <tr class="bg-light">
         <th>Name</th>
         <th>Description</th>
         <th>Homepage</th>
@@ -42,7 +254,7 @@
           <td><%= project.end_date %></td>
           <td><%= link_to 'Show', project %></td>
           <td><%= link_to 'Edit', edit_project_path(project) %></td>
-          <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?', dialog: 'dialog' } %></td>
         </tr>
       <% end %>
       </tbody>

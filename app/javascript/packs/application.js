@@ -32,7 +32,7 @@ const handleConfirm = (link) => {
 
 // Add event listener before the other Rails event listeners like the one
 // for `method: :delete`
-Rails.delegate(document, 'a[data-confirm-test]', 'click', handleConfirm);
+Rails.delegate(document, 'a[data-dialog]', 'click', handleConfirm);
 
 Rails.start();
 Turbolinks.start();
