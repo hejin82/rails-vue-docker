@@ -8,6 +8,14 @@ export default class extends Controller{
     console.log('connect projects controller - js')
   }
 
+  typeclickhandle(event) {
+    console.log('typeclickhandle:', event)
+    console.log('event.querySelector(\'checkbox\'):', event.target.querySelector('input[type=checkbox]'))
+    let checkbox = event.target.querySelector('input[type=checkbox]')
+    checkbox.checked = !checkbox.checked
+    checkbox.indeterminate = true
+  }
+
   itemClick(event) {
     alert(event)
   }

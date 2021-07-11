@@ -2,31 +2,22 @@
 
 <main data-controller="projects">
 
-  <div class="row justify-content-center">
-    <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center">
-      <div class="inline w-100 field">
-        <label>Select Topics</label>
-
-        <select name="skills" multiple="" class="label ui selection fluid dropdown">
-          <option value="">All</option>
-          <option value="1">Topic 1</option>
-          <option value="2">Topic 2</option>
-          <option value="3">Topic 3</option>
-          <option value="4">Topic 4</option>
-          <option value="5">Topic 5</option>
-          <option value="6">Topic 6</option>
-          <option value="7">Topic 7</option>
-          <option value="8">Topic 8</option>
-          <option value="9">Topic 9</option>
-          <option value="10">Topic 10</option>
-          <option value="11">Topic 11</option>
-
-        </select>
+  <%= form_with url: projects_path(page: 1), method: :get do |form| %>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="list-group">
+            <button type="button" class="list-group-item list-group-item-action list-group-item-primary" data-action="click->projects#typeclickhandle">
+              <input class="form-check-input me-1" type="checkbox" name="status" value="1" aria-label="...">
+              The current button
+            </button>
+            <button type="button" class="list-group-item list-group-item-action" data-action="click->projects#typeclickhandle">
+              <input class="form-check-input me-1" type="checkbox" name="status" value="1" aria-label="...">The current button
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
-  <%= form_with url: projects_path(page: 1), method: :get do |form| %>
     <div class="container">
       <div class="row">
         <div class="col">
