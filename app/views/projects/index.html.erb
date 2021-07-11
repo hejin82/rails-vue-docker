@@ -3,6 +3,11 @@
 <main data-controller="projects">
 
   <%= form_with url: projects_path(page: 1), method: :get do |form| %>
+    <select id="hideSelectedOptionMultiple" multiple>
+      <option value="value1" selected>Value 1</option>
+      <option value="value2">Value 2</option>
+      <option value="value3">Value 3</option>
+    </select>
     <div class="container">
       <div class="row">
         <div class="col-6">

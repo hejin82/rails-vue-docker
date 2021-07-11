@@ -1,10 +1,16 @@
 import { Controller } from "stimulus";
 import Rails from "@rails/ujs";
+import SlimSelect from 'slim-select'
+
 
 export default class extends Controller{
   static targets = [ "form", "query", "display"]
 
   connect() {
+    new SlimSelect({
+      select: '#hideSelectedOptionMultiple',
+      hideSelectedOption: true
+    })
     console.log('connect projects controller - js')
   }
 
