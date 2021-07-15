@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_03_111733) do
+ActiveRecord::Schema.define(version: 2021_07_15_114724) do
 
   create_table "animals", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -43,6 +43,17 @@ ActiveRecord::Schema.define(version: 2021_07_03_111733) do
     t.boolean "is_public"
     t.datetime "start_date"
     t.datetime "end_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tasks", charset: "utf8mb4", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "email"
+    t.integer "cnt"
+    t.date "start_date"
+    t.date "end_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
