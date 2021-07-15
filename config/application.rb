@@ -36,6 +36,7 @@ module RailsVueDocker
     # and the SQL format makes that possible
     # config.active_record.schema_format = :sql
 
+    config.i18n.available_locales = [:en, :ja]
     config.i18n.default_locale = :ja
   end
 end
