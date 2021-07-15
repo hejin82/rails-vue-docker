@@ -9,7 +9,23 @@ export default class extends Controller{
   connect() {
     new SlimSelect({
       select: '#hideSelectedOptionMultiple',
-      hideSelectedOption: true
+      hideSelectedOption: true,
+      showSearch: false,
+      closeOnSelect: false,
+      selectByGroup: true,
+      allowDeselect: true,
+      deselectLabel: '<span class="multiple-delete-item"><i class="fas fa-times"></i></span>',
+      'placeholder': ' ', 'text': 'placeholder text'
+    })
+    new SlimSelect({
+      select: '#hideSelectedOptionMultiple2',
+      hideSelectedOption: true,
+      showSearch: false,
+      closeOnSelect: false,
+      selectByGroup: true,
+      allowDeselect: true,
+      deselectLabel: '<span class="multiple-delete-item"><i class="fas fa-times"></i></span>',
+      'placeholder': ' ', 'text': 'placeholder text'
     })
     console.log('connect projects controller - js')
   }
@@ -23,7 +39,6 @@ export default class extends Controller{
   }
 
   itemClick(event) {
-    alert(event)
   }
   search(event) {
     const query = event.target.value.toLowerCase()

@@ -12,3 +12,9 @@
 @import "new_switch";
 @import "will_paginate";
 @import "../../../node_modules/slim-select/dist/slimselect";
+
+.multiple-delete-item {
+  &:hover {
+    color: $primary;
+  }
+}
