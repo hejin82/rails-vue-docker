@@ -27,6 +27,9 @@
   </div>
 
   <div class="field">
+    <buttn class="btn btn-primary" @click="showSearch">選択</buttn>
+  </div>
+  <div class="field">
     <%= form.label :cnt %>
     <%= form.number_field :cnt %>
   </div>
@@ -44,4 +47,14 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
+  <app-modal :show="true">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input type="text" name="task[searchInput]" v-model="searchInput">
+        </div>
+      </div>
+    </div>
+  </app-modal>
 <% end %>

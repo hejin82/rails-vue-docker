@@ -1,5 +1,35 @@
+<% content_for :vue do %>
+  <%= javascript_pack_tag 'task_new', 'data-turbolinks-track': 'reload' %>
+<% end %>
 <h1>New Task</h1>
+<div class="container" id="task_new">
+  {{ message }}
+  <%= render 'form', task: @task %>
 
-<%= render 'form', task: @task %>
+  <%= link_to 'Back', tasks_path %>
 
-<%= link_to 'Back', tasks_path %>
+
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    tabindex="-1"
+    v-show="showSearchModal"
+    id="searchModal"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
